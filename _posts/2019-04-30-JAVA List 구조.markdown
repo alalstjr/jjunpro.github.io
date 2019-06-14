@@ -1,0 +1,82 @@
+---
+layout:     post
+title:      JAVA List 구조
+author:     쭌프로
+tags:       JAVA
+subtitle:   JAVA List 구조 정리노트
+category:   JAVA
+---
+
+<!-- Start Writing Below in Markdown -->
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/java_bg.png)
+
+# List 구조(Vactor, ArrayList, LinkedList)
+
+1. Vector 
+  - 동기화 지원으로 안전한 처리가 가능하지만 <b>성능이 저하될 수 있음</b>
+2. ArrayList
+  - Vector를 개량한 클래스
+  - 저장순서가 유지되고 중복값이 허용됨
+  - 내부적으로 배열을 사용하여 빠른 처리가 가능함
+  - 비순차적인 추가, 삭제 작업의 성능은 떨어짐
+3. LinkedList
+  - 비순차적인 추가, 삭제 작업의 경우 ArrayList보다 성능이 좋음
+  
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/2019-04-30-2.png)
+
+# 리스트(List)의 사용 방법
+
+1. List의 생성
+  - List<자료형> 참조변수 = new ArrayList<자료형>();
+  
+2. 자료의 개수
+  - 참조변수.size();
+  
+3. 자료 추가
+  - 참조변수.add(값);
+  - 참조변수.add(인덱스,값);
+  
+4. 자료 참조
+  - 참조변수.get(인덱스);
+  - 인덱스는 0부터 시작
+  
+5. 자료 삭제
+  - 참조변수.remove(인덱스);
+  
+## Vector 를 활용한 예제
+
+<script src="https://gist.github.com/alalstjr/f172ee6efe943f35bac295149ef20bcf.js"></script>
+
+## ArrayList 를 활용한 예제
+
+Vector와 사용법이 비슷하지만 좀더 가볍고 속도가 빠릅니다.
+
+<script src="https://gist.github.com/alalstjr/8382ddaa85cafa36478287f0a0ffb280.js"></script>
+
+## ArrayList 를 활용한 심화 예제
+
+<script src="https://gist.github.com/alalstjr/501ece8474ad33f7816ae166d27effa6.js"></script>
+
+주소값을 간단하게 확인하는방법
+System.out.println(list); 로 자체 list 값을 출력해보면
+패키지네임.클래스네임@주소값 을 가리킵니다.
+이를 기본값의 Override toString 을 사용하지않고
+직접 Override toString 만들어 출력하면
+
+[Member [userid=jjunpro-1, 
+ password=1234-1, 
+ name=쭌프로-1, 
+ tel=010-1234-1234-1, 
+ email=jjun-pro@naver.com-1], Member [userid=jjunpro-2, 
+ password=1234-2, 
+ name=쭌프로-2, 
+ tel=010-1234-1234-2, 
+ email=jjun-pro@naver.com-2], Member [userid=jjunpro-3, 
+ password=1234-3, 
+ name=쭌프로-3, 
+ tel=010-1234-1234-3, 
+ email=jjun-pro@naver.com-3]]
+
+이런식으로도 출력할 수 있습니다.
+값을 간단하게 확인할때 사용할 수 있습니다.

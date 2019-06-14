@@ -1,0 +1,67 @@
+---
+layout:     post
+title:      JSP 에러처리
+author:     쭌프로
+tags:       JAVA JSP
+subtitle:   JSP 에러처리 정리노트
+category:   JAVA
+---
+
+<!-- Start Writing Below in Markdown -->
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/java_bg.png)
+
+# 에러처리
+
+에러가 발생하면 개발자를 위해 소스코드 및 스택 추적 정보가 화면에 노출됨
+보안성 향상 및 사이트를 방문하는 사용자들에게 친숙한 안내 화면 제공
+
+# HTTP 상태 코드
+
+| 에러 코드 | 의미 | 설명 |
+| :--- | :--- | :--- |
+| 1xx | Informational (정보) | 요청을 받고 처리 중에 있음 |
+| 2xx | Success (성공) | 요청을 정상적으로 처리함 |
+| 3xx | Redirection (리디렉션) | 요청 완료를 위해 추가 동작이 필요함 |
+| 4xx | Client Error (클라이언트 오류) | 클라이언트 요청을 처리할 수 없어 오류 발생 |
+| 5xx | Server Error (서버 오류) | 서버에서 처리를 하지 못하여 오류 발생 |
+
+# 주로 사용하는 상태 코드
+
+| 상태 코드 | 메세지 | 설명 |
+| :---- | :--- | :--- |
+| 200 | OK | 요청 정상 처리 |
+| 400 | Bad Request | 클라이언트의 요청 구문이 잘못됨 |
+| 401 | Unauthorized | 요청 처리를 위해 HTTP 인증 정보가 필요함 |
+| 403 | Forbidden | 접근 금지 응답. Directory Listing 요청(서버 파일 디렉토리 목록 표시) 및 관리자 페이지 접근 등을 차단하는 경우의 응답. (파일 시스템 퍼미션 거부, 허가되지 않은 IP 주소를 통한 액세스의 거부 등) |
+| 404 | Not Found | 클라이언트가 요청한 리소스가 서버에 없음 |
+| 500 | Internal Server Error | 서버에서 클라이언트 요청을 처리 중에 에러가 발생함 |
+| 503 | Service Unavailable | * 서버가 일시적으로 요청을 처리할 수 없음 * 서버가 과부하 상태이거나 정검중이므로 요청을 처리할 수 없는 상태 |
+
+# 에러처리 예제
+
+<script src="https://gist.github.com/alalstjr/8412f5dedb36952f588a48be276f7777.js"></script>
+
+WebContent -> error -> error.jsp
+
+실행하면 num 값이 존재하지 않기 때문에 에러 페이지가 표시됩니다.
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/2019-05-07-1.png)
+
+사용자에게 불피요한 정보가 출력함과 동시에 보안상 위험하기 때문에 
+사용자에게는 안내문이 출력될 수 있도록 해야합니다.
+
+## xml error page 코드 추가
+
+<script src="https://gist.github.com/alalstjr/89ae36995c3c54f9ff6a5b0df80d0440.js"></script>
+
+각각 상황에 맞는 코드에 따라서 에러 표시 페이지를 연결하면 됩니다.
+
+## error view page 생성
+
+<script src="https://gist.github.com/alalstjr/b4e317def9682c21290276949baa08d2.js"></script>
+
+사용자에게 보여지는 페이지를 생성 하였습니다.
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/2019-05-07-2.png)
+

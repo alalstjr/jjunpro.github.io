@@ -1,0 +1,95 @@
+---
+layout:     post
+title:      JAVA 란 무엇인가?
+author:     쭌프로
+tags: 		  JAVA
+subtitle:   JAVA의 정체!
+category:   JAVA
+---
+<!-- Start Writing Below in Markdown -->
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/java_bg.png)
+
+# JAVA 란
+<p>
+  JAVA는 네트워크상에서 쓸 수 있도록 미국의 <b>선 마이크로 시스템즈</b>가 개발한 객체 지향 프로그래밍 언어
+</p>
+
+# JAVA 개발 환경
+
+## 1) JAVA SDK(Software Development Kit) 의 분류
+
+<p>
+  JAVA SE(Standard Editon) : 표준 개발도구 <br/>
+  JAVA EE(Enterprise Edition) : Java를 활용하여 서버측(웹) 프로그램을 개발하는 도구 <br/>
+  JAVA EE 는 Spring 프레임워크 같은 것을 의미합니다.
+</p>
+
+<p>
+  JRE(Java Runtime Environment) : Java 실행 환경 <br/>
+  JDK(Java Development Kit) : Java 개발 도구 + JRE가 포함되어 있다. <br/>
+  JVM(Java Virtual Machine) : Java 가상 머신
+</p>
+
+<p>
+  Java는 JVM로 인해서 모든 운영체제에서 작동하는 특징을 가지고 있습니다.
+</p>
+
+## JAVA JDK DOWNLOAD
+
+<p>
+  자바 설치는 Oracle 홈페이지에서 직접 다운로드 할 수 있습니다.<br/>
+  <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">Java SE Download 바로가기</a>
+</p>
+
+## JAVA 환경 변수 설정
+
+<p>
+  JAVA_HOME (Java의 Home Directory) Java의 설치 경로를 설정해주는 것 <br/>
+  path 추가 Java compiler (javac.exe)의 위치를 지정해 주는것 <br/>
+  path를 추가하는 이유는 Java Directory 를 벗어나도 Java 컴파일러를 실행시킬 수 있도록 설정하는것
+</p>
+
+<p>
+  1. 시작버튼 + R 누르면 실행 창이 나오는데 주소를 sysdm.cpl 작성후 확인을 누릅니다. <br/>
+  2. 시스템 속성 창이 나오면 고급 -> 환경변수 -> 시스템 변수의 새로 만들기 클릭 <br/>
+  3. 변수 이름 JAVA_HOME 작성 변수 값은 JAVA 설치 경로 작성  <br/>
+  4. path 설정에 (Java설치경로)\bin 을 작성후 저장합니다. 
+</p>
+
+## JAVA API DOCUMENT 문서 링크
+
+<a href="https://docs.oracle.com/en/java/javase/12/docs/api/index.html">Java 12 JDK API 문서 링크입니다.</a>
+
+## Java의 특징
+
+<p>
+  1) 운영체제에 독립적인 언어 <br/>
+  - Java는 JVM(자바가상머신) 으로 인해 운영체제가 변경되어도 Java 프로그램이 바뀌지 않습니다. <br/>
+  - <b>어떠한 운영체제</b>에서도 코드가 바뀌지않는 특징을 가지고 있습니다.
+  2) 기본 자료형을 제외한 모든 요소들이 <b>객체로 표현</b>
+  3) 객체 지향 개념의 특징인 <b>캡슐화, 상속, 다형성</b>이 잘 적용된 언어
+  4) Garbage Collector를 통한 <b>자동적인 메모리 관리</b>
+  5) <b>멀티쓰레드(Multi-thread)</b>를 지원
+</p>
+
+<p>
+  2) Java 코드 동작순서 <br/>
+  - Java Source -> Java Compiler -> Java Byte Code(코드를 기계어로 바꿔주는 과정) -> 운영체제 <br/>
+  예제) 코드 Hello.java 를 컴파일을 한다고 하면 <br/>
+  Java Byte Code로 Hello.class 라는 파일이 생성됩니다. (기계어로 변경된 파일)<br/>
+</p>
+
+## Java 프로그래밍의 규칙
+<p>
+  1) 문장의 끝에는 ;(세미콜론, semi-colon) 으로 마침 <br/>
+  2) 괄호의 종류 <br/>
+    - [] 대괄호 - 배열참자에 사용 <br/>
+    - {} 중괄호 class, method 등 code block 의 시작과 끝을 표시 <br/>
+    - () 소괄호 method의 배개변수, method 호출에 사용
+</p>
+
+## 좀더 자세하게 알고싶다면?
+직접 검색해보고 최고의 설명이다! 라고 생각드는 블로그 주소를 정리해 두었습니다. <br/>
+<a href="https://medium.com/@lazysoul/jvm-%EC%9D%B4%EB%9E%80-c142b01571f2">JVM 이란? Lazysoul님의 블로그</a> <br/>
+<a href="https://hahahoho5915.tistory.com/16">웹 프로그래머(JAVA, JSP) 면접 예상 질문</a>

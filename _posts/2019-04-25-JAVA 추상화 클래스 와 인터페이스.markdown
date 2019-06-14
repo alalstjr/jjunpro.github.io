@@ -1,0 +1,102 @@
+---
+layout:     post
+title:      JAVA 추상화 클래스 와 인터페이스
+author:     쭌프로
+tags:       JAVA
+subtitle:   JAVA 추상화 클래스, 인터페이스 정리노트
+category:   JAVA
+---
+
+<!-- Start Writing Below in Markdown -->
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/java_bg.png)
+
+# 추상화
+
+## 객체에서 공통된 속성과 행위를 추출하는 것
+     
+Shape
+  - draw(); -> abstract
+  - delete(); -> abstract
+  - doAll();
+
+Circle
+  - draw(){};
+  - delete(){};
+  
+Triangle
+  - draw(){};
+  - delete(){};
+  
+Rectangle
+  - draw(){};
+  - delete(){};
+  
+
+## JAVA 에서의 추상화
+
+추상 클래스를 활용 (1개 이상의 추상메소드)
+인터페이스를 활용 (모두가 추상 멤버)
+
+### 추상 클래스 (abstract class)
+
+1. abstract method(미완성 메소드)를 포함하고 있는 클래스
+  - abstract method 선언부만 있고 구현부가 없는 메소드
+  
+2. 추상클래스는 인스턴스를 생성할 수 없다.
+
+3. 추상클래스를 상속받는 자식클래스에서 abstract method를 완성해야 함
+
+4. 코드의 공통적인 부분을 제시하고 표준화하기 위한 용도로 활용됨
+
+<script src="https://gist.github.com/alalstjr/3edce614b5822283e474e4a155e6dfb3.js"></script>
+
+# 인터페이스
+
+1. <b>추상메서드와 상수만</b>을 멤버로 가질 수 있다.
+추상클래스 보다 추상화 정도가 높다.
+(인터페이스 > 추상클래스)
+
+2. 인스턴스를 생성할 수 없고, 클래스 작성에 도움을 줄 목적으로 사용된다.
+
+3. 미리 정해진 규칙에 맞게 구현하도록 <b>표준을 제시</b>하는 데 사용된다.
+(이벤트터리 등에 활용됨)
+
+4. 유연한 설계가 가능해지고 유지보수가 쉬워진다.
+
+## 인터페이스의 구현
+
+<b>class 클래스이름 extends 부모클래스 implements 인터페이스</b>
+
+인터페이스에 정의된 추상메서드를 완성해야 한다.
+
+클래스는 다중상속이 안되지만 <b>인터페이스는 다중구현이 가능</b>하다.
+
+## 인터페이스의 장점
+
+인터페이스를 활용하면 유연한 개발이 가능해진다.
+ - A는 B의 method만 호출하면 된다.
+ - A는 C의 존재와 내용을 몰라도 B를 통해 기능을 사용할 수 있다.
+ - C의 변경이 A에 영향을 미치지 않는다(느슨한 결합이 가능해짐)
+ - C의 핵심적인 기능을 자유롭게 변경할 수 있게 된다.
+ 
+A(class) => B(interface) => C(interface를 구현하는 클래스)
+
+## 사용 예제
+
+<script src="https://gist.github.com/alalstjr/7d2a2e709b2614ce875df7ac5361ee28.js"></script>
+
+## 의존 관계
+
+하나의 클래스가 다른 클래스를 사용하는 관계 
+특징은 사용되는 클래스가 변경되면 사용하는 클래스까지 영향을 받는다.
+
+## 인터페이스를 활용한 코딩
+
+<script src="https://gist.github.com/alalstjr/bebca2b72afd215ac148e9ab23ba35f9.js"></script>
+
+위 예제에서 사용한 applet 은 이제 보안상 사용을 안하도록 되어있습니다.
+
+# 참고자료 
+<a href="https://m.blog.naver.com/PostView.nhn?blogId=dkelf88&logNo=150046969961&proxyReferer=https%3A%2F%2Fwww.google.com%2F">
+자바에서 관계 정리</a>

@@ -1,0 +1,110 @@
+---
+layout:     post
+title:      우선순위 큐 C언어
+author:     쭌프로
+tags: 		  C언어
+subtitle:   C언어로 표현하는 우선순위 큐
+category:   C언어
+---
+<!-- Start Writing Below in Markdown -->
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/c_bg.png)
+
+<p>
+  우선순위 큐가 어떻게 작동하며 C언어로 구현하는지 <br/>
+  개인적으로 공부하여 작성한 공부 노트입니다.
+</p>
+
+# 우선순위 큐란?
+
+<p>
+  데이터를 저장할때 우선순위를 가진 데이터를 저장하며 <br/>
+  데이터를 꺼낼 때 우선순위가 높은 순으로 데이터를 가져옵니다.
+</p>
+
+## 다른 자료 구조와의 차이점
+
+<p>
+  스택(Stack) - 가장 최근에 들어온 데이터 <br/>
+  큐(Queue) - 가장 먼저 들어온 데이터 <br/>
+  우선순위 큐(Priority Queue) - 가장 우선순위가 높은 데이터
+</p>
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/2019-03-16-1.png)
+
+<p>
+  여기서 일반적인 큐(Queue)는 선형적인 형태를 가지고 있지만 <br/>
+  우선순위 큐(Priority Queue)는 '완전 이진트리' 형태를 지니고 있으며 <br/>
+  최대 힙(heap)을 이용해 구현합니다.
+</p>
+
+## 힙(heap) 의 종류
+
+<p>
+  최대 힙(Max Heap) <br/>
+  부모 노드의 키 값이 자식 노드의 키 값보다 '크거나 같은' 완전 이진 트리 <br/>
+  최소 힙(Min Heap) <br/>
+  부모 노드의 키 값이 자식 노드의 키 값보다 '작거나 같은' 완전 이진 트리
+</p>
+
+## PUSH, POP 구현
+
+<p>
+  <b>삽입(PUSH)</b>은 완전 이진트리 형태를 유지하면서 순서대로 데이터를 삽입하는 것 Data1 Data2 Data3 .. 왼쪽에서 오른쪽으로
+</p>
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/2019-03-16-2.png)
+
+<p>
+  완전 이진트리의 마지막인 (6)index 에 data를 추가합니다. <br/>
+  삽입 이후 <b>루트 노드(0 index 꼭대기)</b> 까지 최대 힙을 구성합니다.
+</p>
+  
+<p>
+  위의 이미지를 예를 들면 <br/>
+  마지막 루트(index 6)에 (data 12)를 추가 한 후에 <br/>
+  부모 루트(index 2)(data 7) 와 크기를 비교 합니다. <br/>
+  <b>삽입한 노드의 값이 더 크기 때문에 서로 자리를 바꿔줍니다.</b> <br/>
+  이렇게 <b>꼭대기 루트 노드까지 비교하며 올라가며 최대 힙을</b> 구성합니다.
+</p>
+
+## 코드 예제)
+<script src="https://gist.github.com/alalstjr/2239515e091d33fe3e2db59386f299f5.js"></script>
+
+<p>
+  <b>추출 삭제(POP)</b> 가장 위쪽의 루트 노드 값을 제거 한 후에 가장 마지막 원소의 노드의 data 값을 최상단 루트 노드로 위치를 변경 합니다.
+</p>
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/2019-03-16-3.png)
+
+<p>
+  최상단 노드(index 0)의 (data 15) 값을 추출 한 후에 <br/>
+  맨 마지막 원소(index 6)(data 2) 값을 최산단 노드의 위치로 변경 합니다.
+</p>
+
+<p>
+  이후 하양식으로 부모 노드와 자식 노드값을 비교하면서 <br/>
+  최대 힙 구성을 하도록 내려가며 비교합니다.
+</p>
+
+## 코드 예제)
+
+<script src="https://gist.github.com/alalstjr/21a7555d9977a5e73f06e005a20a7db1.js"></script>
+
+## 결과 확인)
+
+<script src="https://gist.github.com/alalstjr/221a4c0e7f77a0013a685259a0a53d63.js"></script>
+
+<p>
+  결과를 확인해 보면 50 40 30 20 10 순으로 정상적으로 최대 힙이 구성된것을 확인할 수 있었습니다.
+</p>
+
+<p>
+  인강을 보고 여러 블로그도 참조하여 개인적으로 가장 이해할 수 있도록 정리한 노트입니다. 
+  역시 직접 손으로 하나하나 찾아보고 작성해보니 완전히 이해할 수 있었습니다.
+</p>
+
+<p>
+  부족한점이나 틀린점이 있다면 바로 jjun-pro@naver.com으로 지적해주시면 감사하겠습니다.~
+  설명에 필요한 그림은 직접 그렸습니다~
+</p>

@@ -1,0 +1,45 @@
+---
+layout:     post
+title:      JAVA 내부 클래스
+author:     쭌프로
+tags:       JAVA
+subtitle:   JAVA 내부 클래스 정리노트
+category:   JAVA
+---
+
+<!-- Start Writing Below in Markdown -->
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/java_bg.png)
+
+# 내부 클래스
+
+<p>
+  클래스 안에 선언된 클래스 <br/>
+  특정 클래스 내에서만 주로 사용되는 클래스를 내부 클래스로 선언한다. <br/>
+  <b>GUI애플리케이션(AWT, Swing)의 이벤트처리에 주로 사용됨</b> <br/>
+  내부클래스도 클래스이기 떄문에 <b>(외부클래스$내부클래스.class)</b> 로 컴파일 됨
+</p>
+
+## 장점
+
+<p>
+  내부 클래스에서 외부 클래스의 멤버들을 쉽게 접근할 수 있다. <br/>
+  코드의 복잡성을 줄일 수 있다.
+</p>
+
+## 단점
+코드의 재사용이 어려워집니다.
+
+## 예제
+
+<script src="https://gist.github.com/alalstjr/773b3865537dfecce5bf5a2b4c85a7fe.js"></script>
+
+### 무명 내부 클래스 생성 예제
+
+<script src="https://gist.github.com/alalstjr/786c981541dfca0df8c2a10f9291cab0.js"></script>
+
+## 이벤트처리 예제
+
+<script src="https://gist.github.com/alalstjr/8055b08882c2e972be26130bf91e8d79.js"></script>
+
+이런식으로 이벤트 실행시 내부 클래스를 불러와 기능을 사용하는곳에 사용합니다.

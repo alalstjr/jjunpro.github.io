@@ -1,0 +1,90 @@
+---
+layout:     post
+title:      MySQL 테이블 생성, 컬럼 추가, 삭제, 수정
+author:     쭌프로
+tags:       JAVA MySQL
+subtitle:   JAVA 멀티스레드 정리노트
+category:   JAVA
+---
+
+<!-- Start Writing Below in Markdown -->
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/java_bg.png)
+
+# 테이블 속성 확인
+
+desc [테이블명];
+
+# 테이블 생성
+
+create table [테이블명](id int,name varchar(20));
+
+# 컬럼 추가
+
+alter table [테이블명] add [컬럼명] [타입] [옵션]; 
+
+ex) alter table [테이블명] add [컬럼명] varchar(100) not null default '0'; 
+
+# 컬럼 삭제
+
+alter table [테이블명] drop [컬럼명];
+
+# 컬럼명 변경 및 타입 변경
+
+alter table [테이블명] change [컬럼명] [변경할컬럼명] varchar(12);
+
+# 컬럼 타입 수정
+
+alter table [테이블명] modify [컬럼명] varchar(14);
+
+# 테이블명 수정
+
+alter table [테이블명] rename [변경할테이블명];
+
+# 테이블 삭제
+
+drop table [테이블명];
+
+# ---------------------
+
+# 테이블 속 데이터 전체 삭제
+
+Truncate [테이블명];
+
+# Procedure프로시저 만들기
+
+{% highlight matlab %}
+
+  delimiter $$
+  drop procedure if exists loop_test $$ // loop_test procedure 를 초기화
+  create procedure loop_test(in max int) // in 입력 매개변수
+  begin
+    declare cnt int default 0;
+    my_while:while (cnt < max) do
+      set cnt = cnt + 1;
+      insert into memo (writer, memo) values (cnt, concat('name', cnt));
+    end while;
+
+    select '완료되었습니다.';
+
+  end $$
+  delimiter;
+
+  delete from {table};
+  Call loop_test(900); // 등록한 프로시저를 실행하여 900데이터 등록
+  
+{% endhighlight %}
+
+delimiter $$ // 시작해서
+... 
+$$  // 끝난다.
+delimiter;
+
+# 참고자료
+
+<a href="https://mcpaint.tistory.com/194">출처: [MC빼인트와 함께]</a> <br/>
+<a href="https://yonoo88.tistory.com/41">mysql 추가</a> <br/>
+<a href="http://wego21.com/bbs/board.php?bo_table=mysql&wr_id=2">테이블 속성및 구조 변경방법</a>
+
+## procedure 활용
+<a href="https://recoveryman.tistory.com/186">프로시저 활용하기</a>

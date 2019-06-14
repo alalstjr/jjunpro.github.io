@@ -1,0 +1,17 @@
+---
+layout:     post
+title:      JSP EL 정리
+author:     쭌프로
+tags:       JAVA JSP
+subtitle:   JSP EL 정리 노트
+category:   JAVA
+---
+
+<!-- Start Writing Below in Markdown -->
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/java_bg.png)
+
+# 예외처리
+
+<a href="https://hunit.tistory.com/203">Ara Blog :: Jsp〃[EL]과 [JSTL] 한방에 정리 + Core - Java</a>
+<a href="https://opentutorials.org/module/3569/21228">EL(Expression Language)</a>

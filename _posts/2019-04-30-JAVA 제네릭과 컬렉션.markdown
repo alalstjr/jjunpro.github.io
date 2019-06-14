@@ -1,0 +1,103 @@
+---
+layout:     post
+title:      JAVA 제네릭과 컬렉션
+author:     쭌프로
+tags:       JAVA
+subtitle:   JAVA 제네릭과 컬렉션 정리노트
+category:   JAVA
+---
+
+<!-- Start Writing Below in Markdown -->
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/java_bg.png)
+
+# 일반화(Generic)
+
+다양한 자료형의 데이터를 처리하기 위해서 일반화(Generic) 작업이 필요함
+
+## 오버라이딩 형변환 예제
+
+<script src="https://gist.github.com/alalstjr/a4588ae60473198be716d0d10f628f0b.js"></script>
+
+<p>
+   int 형만을 받는 getValue 메소드 입니다. <br/>
+   그러므로 문자열인 "100" 을 출력할 수 없습니다. <br/>
+   <br/>
+   이 문제를 해결하기 위해서 방법은 여러가지가 있습니다. <br/>
+   첫번째 오버로딩 을 활용하여  <br/>
+   <br/>
+   private String value; <br/>
+   <br/>
+   public int setValue(String value) { <br/>
+     this.value = value; <br/>
+   } <br/>
+   <br/>
+   문자열을 출력하도록 할 수 있습니다. <br/>
+   하지만 받아야 하는 변수의 형도 String value 로 바꿔줘야하는  <br/>
+   비효율적인 부분이 있습니다.
+</p>
+
+## 오브젝트 형변환 예제
+
+<script src="https://gist.github.com/alalstjr/ac62314d07589b95f63167c7da284508.js"></script>
+
+<p>
+  값이 저장되고 출력될때마다 형변환이 매번 일어나는것을 <br/>
+  주석을 표기한곳을 보면 알 수 있습니다. <br/>
+  너무 많은 계산이 실행되기에 <br/>
+  이 방법또한 비효율 적이라 할 수 있습니다.
+</p>
+
+## 제네릭 형변환 예제
+
+<script src="https://gist.github.com/alalstjr/8a4e2116f9726072b86decec5cc90f87.js"></script>
+
+# 컬렉션(Collection)
+
+1. 집합데이터(다수의 데이터, 데이터 그룹)을 의미함
+2. 집합데이터를 저장할 수 있는 자료형
+   - 배열
+   - 컬렉션 클래스(collection class)
+   - ArrayList, HashSet, HashMap
+
+3. 컬렉션 클래스들은 <b>배열의 단점을 보완</b>하기 위해 만들어짐
+4. <b>자료 구조들에 대한 알고리즘</b>이 미리 구현되어 있음 (Stack, LinkedList, Sort 등)
+
+## 배열과 컬렉션
+1. 배열의 장점
+   - 빠른 처리 속도
+2. 배열의 단점
+   - 같은 자료형만 저장 가능(Object 배열 제외)
+   - 사이즈가 고정적입니다. (낭비문제도 있습니다.)
+   - 추가 삭제가 어렵습니다. (중간의 값을 추가하면 나머지 뒤의 값을 전부 밀어내줘야합니다.)
+3. 컬렉션의 장점
+   - 다양한 자료형 저장 가능
+   - 사이즈가 유동적
+   - 추가, 삭제가 쉽습니다.
+4. 컬렉션의 단점
+   - 배열에 비해 속도가 느리고 메모리 사용량이 늘어납니다.
+
+# 컬렉션의 종류
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/2019-04-30-1.jpg)
+
+## Set 계열
+
+순서가 없고 중복 못합니다.<br/>
+주머니에 여러 색상의 공을 집어 넣는다고 생각하면 쉽습니다.
+
+## List 계열
+
+index 순서가 있으며 중복도 가능합니다.
+
+## Map 계열
+
+Key(변수명)으로 조회하고 순서가 없으며 Value 와 한쌍입니다. <br/>
+Key는 중복될 수 없습니다.
+
+# 좀더 자세하게 알고싶다면?
+
+직접 검색해보고 최고의 설명이다! 라고 생각드는 블로그 주소를 정리해 두었습니다.
+
+<a href="https://hyeonstorage.tistory.com/185">오버로딩(Overloading) 오버라이딩(Overriding) [개발이 하고 싶어요]</a> <br/>
+<a href="https://ac989832.tistory.com/49">제네릭을 알아보자</a>

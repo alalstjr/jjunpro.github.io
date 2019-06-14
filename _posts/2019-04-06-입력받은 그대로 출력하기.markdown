@@ -1,0 +1,111 @@
+---
+layout:     post
+title:      입력받은 그대로 출력하기
+author:     쭌프로
+tags:       알고리즘 C언어
+subtitle:   간단한 알고리즘 코딩 연습
+category:   알고리즘
+---
+<!-- Start Writing Below in Markdown -->
+
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/ag-bg.png)
+
+<p>알고리즘을 작업한 언어는 `C언어` 입니다.</p>
+
+## 백준의 알고리즘 문제 - 입력받은 그대로 출력하기
+
+출처 : <a href="https://www.acmicpc.net/problem/11719">https://www.acmicpc.net/problem/11719</a>
+
+## 문제:
+
+<p>입력 받은 대로 출력하는 프로그램을 작성하시오.</p>
+
+## 입력:
+
+<p>
+  입력이 주어진다. 입력은 최대 100줄로 이루어져 있고, 알파벳 소문자, 대문자, 공백, 숫자로만 이루어져 있다. <br/>
+  각 줄은 100글자를 넘지 않으며, 빈 줄이 주어질 수도 있고, 각 줄의 앞 뒤에 공백이 있을 수도 있다.
+</p>
+
+## 예제입력:
+{% highlight matlab %}
+
+    Hello
+
+Baekjoon     
+   Online Judge    
+{% endhighlight %}
+
+## 예제출력:
+{% highlight matlab %}
+
+    Hello
+
+Baekjoon     
+   Online Judge    
+{% endhighlight %}
+
+<p>
+  문제는 보기와 같이 문자 외에도 엔터도 입력받고 공백 띄어쓰기 스페이스바 값도 입력받아 출력합니다. <br/>
+  각 줄에는 100 자 이상 들어올 수 없다.
+</p>
+
+<p>
+  최대 100줄이면 너무 많기에 저는 5줄 까지만 입력 받도록 했습니다. <br/>
+  최대 입력받는 문자 수도 10자로 줄였습니다. 확인하기 쉽게하기 위해서 줄였습니다. <br/>
+  (문제에서 100줄로 이루어져 있다해서 100번 입력 받게하는것이 맞는지 의문입니다. 문제 이해도가 부족한것이 느껴졌습니다.)
+</p>
+
+{% highlight matlab %}
+
+#include <stdio.h>
+
+int main(void) 
+{
+	char str[5] = { 0, };
+
+	for (int i = 0; i < 5; i++) 
+	{
+		scanf_s("%s", str, sizeof(str));
+
+		printf_s("%s", str);
+
+		printf_s("\n");
+	}
+
+	system("pause");
+	return 0;
+}
+
+{% endhighlight %}
+
+<p>
+  우선 입력 5개를 받고 바로 출력하도록 했습니다. <br/>
+  이제 해야할 것을 정리해보면 <br/>
+	
+	1. 각 줄마다 입력을 전부 받은 다음 출력
+	2. 입력에 조건을 주어서 100 글자 이상일경우 문자 자르기
+	3. 공백값 받기
+
+  세가지를 구현하면 문제가 풀릴꺼라는 생각이 들었습니다. <br/>
+  그럼 세가지를 코딩으로 구현하려면 <br/>
+  
+  	1. 각줄마다 받은 값을 배열에 저장 배열값이 N개 이상이면 입력 중지
+	2. if문을 활용하여 저장한 값이 100자 이상이면 문장 자르기
+	3. 이것은 조금 생각을 해보겠습니다.
+
+  첫번째 부터 하나하나 구현하며 내려가보도록 하겠습니다.
+</p>
+	
+<p>
+  
+</p>
+	
+<p>
+  입력을 받아야 하므로 scanf_s를 사용하며 입력 받은 값을 출력해야 하므로 printf_s 를 활용했습니다.
+</p>
+
+{% highlight matlab %}
+
+{% endhighlight %}

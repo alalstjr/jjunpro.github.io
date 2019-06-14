@@ -1,0 +1,72 @@
+---
+layout:     post
+title:      JAVA로 회원기능 만들기
+author:     쭌프로
+tags: 		  JAVA
+subtitle:   JAVA를 객체를 활용한 회원기능 프로그램
+category:   JAVA
+---
+<!-- Start Writing Below in Markdown -->
+
+![Description](https://alalstjr.github.io/jjunpro.github.io/img/java_bg.png)
+
+<p>
+  JAVA를 공부하며 클레스와 생성자의 개념을 복습하고자<br/>
+  지금까지 공부해온 것을 바탕으로 로그인 회원가입 회원탈퇴 기능을<br/>
+  만들어 볼까 합니다.
+</p>
+
+## 각각의 기능을 가진 Class 만들기
+
+<p>
+  회원관리 기능을 사람이 관리한다고 생각하고 Class 를 만들었습니다. <br/>
+  각각의 역활을 가진 담당자가 있다고 생각하며 <br/>
+  1. 회원의 정보 목록을 관리하는 사람 <br/>
+  2. 외부인이 회원인지 아닌지 판단하는 사람 <br/>
+  3. 메뉴를 보여주며 설명해주는 사람 <br/>
+  <br/>
+  총 세명의 관리자를 만들어야 겠다고 생각하고<br/>
+  <br/>
+  1. Class Member <br/>
+  2. Class Work <br/>
+  3. Class MenuManager <br/>
+  
+  각각의 클레스를 만들었습니다. <br/>
+  이제 기능을 넣어보도록 하겠습니다. <br/>
+</p>
+
+## 회원의 인적사항을 관리하는 Class
+<br/>
+<script src="https://gist.github.com/alalstjr/9026366431942d873531a3ea566c3539.js"></script>
+<p>
+  회원의 <b>자료만</b> 가지고 관리하는 Class 입니다.
+</p>
+
+## 로그인 로그아웃 회원탈퇴 기능을 담당하는 Class
+<br/>
+<script src="https://gist.github.com/alalstjr/7323187859d5e23877386a74a41a6fa3.js"></script>
+<p>
+  회원의 상태및 행동을 도와주는 Class 입니다.
+</p>
+
+## 메뉴를 보여주며 선택지를 주는 Class
+<br/>
+<script src="https://gist.github.com/alalstjr/9e15c16c6efbc8c14ef6049b9be3f1eb.js"></script>
+<p>
+  유저의 선택지를 보여주는 Class 입니다.<br/>
+  로그인상태라면 다른 선택지를 보여주며 계속하여 메뉴를 출력하도록 합니다.
+</p>
+
+## 최종 출력 main 함수
+<br/>
+<script src="https://gist.github.com/alalstjr/07b59c34eeba1ced6c07ac05d27a9545.js"></script>
+<p>
+  main 함수에서 MenuManager 객체를 생성하여<br/>
+  Run() 를 실행하여 메뉴를 출력하도록 하였습니다.
+</p>
+
+<p>
+  코드가 난잡하고 불피요한곳도 많지만 계속해서 공부하여 <br/> 
+  지금과는 다른 코드가 될 수 있도록 노력할 것입니다.  <br/>
+  오늘의 각오 한마디였습니다~
+</p>
