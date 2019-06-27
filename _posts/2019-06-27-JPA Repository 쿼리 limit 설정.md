@@ -76,7 +76,7 @@ DB에 File자료가 하나만 있을때는 쿼리를 한번 실행할때 정상�
 
 이제 코드를 수정해야할 단계입니다.
 
-DBFile findTop1ByFileBoNumAndFileDivisionOrderByFileNoAsc(long num, int division);
+> DBFile findTop1ByFileBoNumAndFileDivisionOrderByFileNoAsc(long num, int division);
 
 limit를 주는 메서드 네임은 findTop{num}By 입니다.
 
