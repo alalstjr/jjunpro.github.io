@@ -22,3 +22,6 @@ http://blog.naver.com/PostView.nhn?blogId=magnking&logNo=220950061851&parentCate
 
 
 https://stackoverflow.com/questions/21329426/spring-mvc-multipart-request-with-json
+
+[SpringMVC] Spring MVC Framework란
+https://gmlwjd9405.github.io/2018/12/20/spring-mvc-framework.html
