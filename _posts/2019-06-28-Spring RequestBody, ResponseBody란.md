@@ -11,6 +11,14 @@ category:   JAVA
 
 ![Description](https://alalstjr.github.io/jjunpro.github.io/img/java_bg.png)
 
+HTTP body, RequestBody, ResponseBody란?
 https://doctorson0309.tistory.com/406
+
 http://blog.naver.com/PostView.nhn?blogId=magnking&logNo=220950061851&parentCategoryNo=&categoryNo=20&viewDate=&isShowPopularPosts=false&from=postView
+https://stackoverflow.com/questions/21329426/spring-mvc-multipart-request-with-json
+
+blob 란 ?
+http://blog.naver.com/PostView.nhn?blogId=magnking&logNo=220950061851&parentCategoryNo=&categoryNo=20&viewDate=&isShowPopularPosts=false&from=postView
+
+
 https://stackoverflow.com/questions/21329426/spring-mvc-multipart-request-with-json
