@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      REST란? REST API란? RESTful이란?
+title:      REST란? REST API란? RESTful이란? (하단 출처표시)
 author:     쭌프로
 tags:       REST
 subtitle:   REST 개념 정리
@@ -206,18 +206,18 @@ REST는 HTTP 표준을 기반으로 구현하므로, HTTP를 지원하는 프로
 
 ## REST API 설계 예시
 
-resource 들의 목록을 표시 - GET - /resource
-resource 하나의 내용을 표시 - GET - /resource/:id
-resource 를 생성 - POST - /resource
-resource 를 수정 - PUT - /resource/:id
+resource 들의 목록을 표시 - GET - /resource <br/>
+resource 하나의 내용을 표시 - GET - /resource/:id <br/>
+resource 를 생성 - POST - /resource <br/>
+resource 를 수정 - PUT - /resource/:id <br/>
 resource 를 삭제 - DELETE - /resource/:id
 
 참고 응답상태코드
 
-1xx : 전송 프로토콜 수준의 정보 교환
-2xx : 클라어인트 요청이 성공적으로 수행됨
-3xx : 클라이언트는 요청을 완료하기 위해 추가적인 행동을 취해야 함
-4xx : 클라이언트의 잘못된 요청
+1xx : 전송 프로토콜 수준의 정보 교환 <br/>
+2xx : 클라어인트 요청이 성공적으로 수행됨 <br/>
+3xx : 클라이언트는 요청을 완료하기 위해 추가적인 행동을 취해야 함 <br/>
+4xx : 클라이언트의 잘못된 요청 <br/>
 5xx : 서버쪽 오류로 인한 상태코드
 
 # RESTful 이란?
