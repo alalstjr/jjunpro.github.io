@@ -20,3 +20,6 @@ category:   JAVA
 # @Resource @Autowired @Inject 차이점과 사용법
 
 <a href="https://itjava.tistory.com/54">@Resource @Autowired @Inject 차이점과 사용법</a>
+
+# 스프링 부트 데이터베이스 초기화
+<a href="https://engkimbs.tistory.com/794">스프링 부트 데이터베이스 초기화</a>
