@@ -27,7 +27,7 @@ category:   JAVA
 
 # 자세한 것은 아래 GIT 저장소에서 확인하기
 
-https://github.com/alalstjr/spring-security-jwt
+[쭌프로 git 저장소](https://github.com/alalstjr/spring-security-jwt)
 
 # 참고자료
 <a href="https://okky.kr/article/382738">Okky 커뮤니티 사이트 - 초보자가 이해하는 Spring Security (좋은 글)</a>
