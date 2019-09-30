@@ -102,3 +102,14 @@ public class FormLoginFilter extends AbstractAuthenticationProcessingFilter {
 ~~~
 
 이렇게 전달받은 ApplicationContext 에서 Bean 을 직접적으로 꺼내서 사용할 수 있습니다.
+
+# AbstractAuthenticationProcessingFilter 상속받은 클래스에서 @Autowired 작동하지 않은 이유
+
+https://docs.spring.io/spring/docs/current/javadoc-api/org/springframework/web/filter/GenericFilterBean.html?is-external=true
+
+~~~
+이 설계 방식의 이유-Spring 보안에서 지원하는 인증 처리 메커니즘은 확장되는 필터를 기반으로합니다 GenericFilterBean.
+이 일반 필터 기본 클래스는 Spring ApplicationContext 개념에 종속 되지 않습니다 . 필터는 일반적으로 자체 컨텍스트를로드하지 않고 필터의 ServletContext를 통해 액세스 할 수 있는 Spring 루트 애플리케이션 컨텍스트에서 서비스 Bean에 액세스합니다 (WebApplicationContextUtils 참조).
+
+따라서 ApplicationContext서비스 빈에 액세스하려면 필터에 를 제공해야합니다 .
+~~~
